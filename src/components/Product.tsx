@@ -6,7 +6,6 @@ type ProductProps = {
         name: string
     }
 }
-
 const Product = ({ data: { id, name } }: ProductProps) => {
     return (
         <div>{name}</div>

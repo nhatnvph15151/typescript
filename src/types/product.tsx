@@ -1,4 +1,6 @@
-export interface IProduct {
-    _id: number,
-    name: string
+export type ProductTye = {
+    _id?: number,
+    name: string,
+    price: number,
+    title :String
 }
