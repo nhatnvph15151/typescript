@@ -1,4 +1,5 @@
-export type user={
+export type User={
     name :String,
-    email : String
+    email : String,
+    password: string
 }

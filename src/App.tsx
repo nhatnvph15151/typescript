@@ -19,6 +19,7 @@ import About from './pages/about';
 import Products from './pages/Products';
 
 
+
 function App() {
   const [products, setProducts] = useState<ProductTye[]>([]);
 
@@ -40,6 +41,7 @@ function App() {
     const { data } = await add(product);
     setProducts([...products, data]);
   }
+  
 
   const onHandleUpdate = async (product: ProductTye) => {
     const { data } = await update(product);
@@ -58,7 +60,7 @@ function App() {
               <Route path=":id" element={<ProductDetail />} />
             </Route>
             <Route path="about" element={<About />} />
-            <Route path="SignUp" element={<SignUp />} />
+            <Route path="SignUp" element={<SignUp  />} />
           </Route>
          
           <Route path="admin" element={<PrivateRouter><AdminLayout /></PrivateRouter>}>

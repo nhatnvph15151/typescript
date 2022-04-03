@@ -1,5 +1,6 @@
 import Title from 'antd/lib/skeleton/Title';
 import React from 'react'
+import { Link } from 'react-router-dom';
 import { ProductTye } from '../types/product';
 
 
@@ -11,6 +12,7 @@ type ProductsProps = {
 const Products = (props: ProductsProps) => {
   return (
     <div>
+        
         <div>
               <h1 className="text-center text-[#e7b45a] text-4xl mt-[30px] ">SẢN PHẨM</h1>
         </div>
@@ -22,7 +24,7 @@ const Products = (props: ProductsProps) => {
                               <img width="100%" height="100%" src="http://at08.chonweb.vn/wp-content/uploads/2020/06/p-8.jpg" alt="" />
                           </div>
                           <p className="flex flex-col my-auto pl-3">
-                              <span className="font-bold">{item.name} <span> ---------------- </span><span>{item.price}</span></span>
+                              <Link to={`${item._id}`} className="font-bold">{item.name} <span> ---------------- </span><span>{item.price}đ</span></Link>
                               <span className="textClamp"> {item.title} </span>
                           </p>
                       </div>

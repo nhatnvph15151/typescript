@@ -8,8 +8,8 @@ type ProductManagerProps = {
 }
 const ProductManager = (props: ProductManagerProps) => {
     return (
-      
         <div>
+            <h1 className="text-center text-4xl text-[#4d5df9]">Product</h1>
             <button className="px-4 py-2 rounded-full bg-white text-black border-2 hover:no-underline hover:bg-black "><Link to={`/admin/products/add`}>ADD</Link></button>
             <table className="table text-xl mt-[20px]">
                 <thead className="thead-dark text-2xl">

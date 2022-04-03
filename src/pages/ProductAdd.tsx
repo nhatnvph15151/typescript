@@ -21,11 +21,22 @@ const ProductAdd = (props: ProductAddProps) => {
   }
   return (
     <form onSubmit={handleSubmit(onSubmit)}>
-      
-      <input type="text" placeholder='Tên sản phẩm' {...register('name')} />
-      <input type="number" placeholder='Giá sản phẩm' {...register('price')} />
-      <textarea className="text-center" placeholder="Thông tin sản phẩm" {...register('title')}></textarea>
-      <button>Add</button>
+      <div>
+  <div className="form-group">
+    <label htmlFor="exampleInputEmail1">Tên sản phẩm</label>
+          <input type="text" className="form-control" placeholder="Tên sản phẩm" {...register('name')} />
+  </div>
+  <div className="form-group">
+    <label htmlFor="exampleInputPassword1">Giá sản phẩm</label>
+          <input type="number" className="form-control" id="exampleInputPassword1" placeholder="Giá sản phẩm" {...register('price')} />
+  </div>
+        <div className="form-group">
+          <label htmlFor="exampleInputPassword1">Thông tin sản phẩm</label>
+          <textarea className="form-control"  placeholder="Thông tin sản phẩm" {...register('title')} />
+        </div>
+  <button  className="btn btn-primary">Submit</button>
+</div>
+
     </form>
   )
 }
