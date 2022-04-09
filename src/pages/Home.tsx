@@ -61,8 +61,8 @@ const Home = (props: HomeProps) => {
                             {props.products.map((item) => {
                                 return <div className=" text-xl mb-[30px]">
                                     <div className="flex ">
-                                    <div className="w-[70px] h-[70px] rounded-full bg-white overflow-hidden ">
-                                    <img width="100%" height="100%" src="http://at08.chonweb.vn/wp-content/uploads/2020/06/p-8.jpg" alt="" />
+                                        <div className="w-[70px] h-[70px] rounded-full bg-white overflow-hidden  flex justify-center item-center text-center mt-auto">
+                                            <img className="w-[100%] h-[100%] object-fill"src={item.image} alt="" />
                                     </div>
                                     <p className="flex flex-col my-auto pl-3"> 
                                             <Link to={`product/${item._id}`} className="font-bold">{item.name} <span> ---------------- </span><span>{item.price}đ</span></Link>
@@ -72,14 +72,40 @@ const Home = (props: HomeProps) => {
                             </div>
                                
                             })}
-                           
-                           
                         </div>
+                        
                    </div>
                 </div>
-                
-
          </div>
+            <div className="image-cafe ">
+                <div className="w-9/12 mx-auto text-2xl">
+                    <h1 className="text-4xl text-[#e7b45a] font-bold my-[30px] text-center">HÌNH ẢNH QUÁN CAFE</h1>
+                    <div className="list-image grid grid-rows-1 grid-cols-2 gap-[30px]">
+                        <div className="relative">
+                            <img className="w-[100%] " src="http://at08.chonweb.vn/wp-content/uploads/2020/06/g5.jpg" alt="" />
+                            <a className="absolute w-[64px] h-[64px] top-[45%] left-[45%] translate-[50%] " href="#"><i className="fa-solid fa-magnifying-glass-plus rounded-full bg-white border-2 p-3 text-center item-center "></i></a>   
+                        </div>
+                        <div className="grid grid-rows-2 grid-cols-2 gap-[30px] ">
+                            <div className="w-[100%] relative">
+                                <img className="w-[100%]" src="http://at08.chonweb.vn/wp-content/uploads/2020/06/g3.jpg" alt="" />
+                                <a className="absolute top-[40%] left-[40%] translate-[50%] " href="#"><i className="fa-solid fa-magnifying-glass-plus rounded-full bg-white border-2 p-3 text-center item-center " ></i></a>
+                            </div>
+                            <div className="w-[100%] relative">
+                                <img className="w-[100%] " src="http://at08.chonweb.vn/wp-content/uploads/2020/06/g2.jpg" alt="" />
+                                <a className="absolute top-[40%] left-[40%] translate-[50%] " href="#"><i className="fa-solid fa-magnifying-glass-plus rounded-full bg-white border-2 p-3 text-center item-center " ></i></a>
+                            </div>
+                            <div className="w-[100%] relative">
+                                <img className="w-[100%]" src="http://at08.chonweb.vn/wp-content/uploads/2020/06/g1.jpg" alt="" />
+                                <a className="absolute top-[40%] left-[40%] translate-[50%] " href="#"><i className="fa-solid fa-magnifying-glass-plus rounded-full bg-white border-2 p-3 text-center item-center "></i></a>
+                           </div>
+                            <div className="w-[100%] relative">
+                                <img className="w-[100%]" src="http://at08.chonweb.vn/wp-content/uploads/2020/06/g4.jpg" alt="" />
+                                <a className="absolute top-[40%] left-[40%] translate-[50%] " href="#"><i className="fa-solid fa-magnifying-glass-plus rounded-full bg-white border-2 p-3 text-center item-center "></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }

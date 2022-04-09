@@ -17,6 +17,8 @@ import PrivateRouter from './components/PrivateRouter';
 import SignUp from './pages/SignUp';
 import About from './pages/about';
 import Products from './pages/Products';
+import Contact from './pages/Contact';
+import SignIn from './pages/SignIn';
 
 
 
@@ -60,7 +62,9 @@ function App() {
               <Route path=":id" element={<ProductDetail />} />
             </Route>
             <Route path="about" element={<About />} />
-            <Route path="SignUp" element={<SignUp  />} />
+            <Route path="SignUp" element={<SignUp />} />
+            <Route path="SignIn" element={<SignIn/>} />
+            <Route path="Contact" element={<Contact />} />
           </Route>
          
           <Route path="admin" element={<PrivateRouter><AdminLayout /></PrivateRouter>}>

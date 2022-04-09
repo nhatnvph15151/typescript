@@ -45,7 +45,7 @@ const Sidebar = (props: Props) => {
                             </NavLink>
                         </li>
                         <li className="list">
-                            <NavLink className="NavLink" to="/admin/dashboard">
+                            <NavLink className="NavLink" to="/">
                                 <span className="icon"><i className="fa-solid fa-right-from-bracket"></i></span>
                                 <span className="title">Sign Out</span>
                             </NavLink>

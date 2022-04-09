@@ -7,6 +7,6 @@ export const signup = (User: User) => {
     return instance.post(url, User);
 }
 export const signin = (User: User) => {
-    const url = `/signin`;
+    const url = `/signIn`;
     return instance.post(url, User);
 }

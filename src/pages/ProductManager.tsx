@@ -2,11 +2,14 @@ import React from 'react'
 import { ProductTye } from '../types/product'
 import { Link } from 'react-router-dom';
 
+
 type ProductManagerProps = {
     products: ProductTye[];
     onRemove: (id: number) => void
 }
+
 const ProductManager = (props: ProductManagerProps) => {
+  
     return (
         <div>
             <h1 className="text-center text-4xl text-[#4d5df9]">Product</h1>
@@ -18,6 +21,7 @@ const ProductManager = (props: ProductManagerProps) => {
                         <th scope="col">Name</th>
                         <th scope="col">Price</th>
                         <th scope="col">Title</th>
+                        <th scope="col">image</th>
                         <th scope="col">Edit</th>
                         <th scope="col">Delete</th>    
                     </tr>
@@ -29,6 +33,7 @@ const ProductManager = (props: ProductManagerProps) => {
                                 <td>{index + 1}</td>
                                 <td>{item.name}</td>
                                 <td>{item.price}</td>
+                                <img width="100px" height="100px" src={item.image} alt="" />
                                 <td>{item.title}</td>
                                 <td>
                                     <button><Link to={`/admin/products/${item._id}/edit`}><i className="fa-solid fa-screwdriver-wrench ml-2"></i></Link></button>

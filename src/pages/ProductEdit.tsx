@@ -9,7 +9,9 @@ type ProductEditProps = {
 }
 type FormInputs = {
   name: string,
-  price: number
+  price: number,
+  image: string,
+  title: string
 }
 const ProductEdit = (props: ProductEditProps) => {
   const { register, handleSubmit, formState: { errors }, reset } = useForm<FormInputs>();
@@ -29,14 +31,28 @@ const ProductEdit = (props: ProductEditProps) => {
     console.log(data)
     props.onUpdate(data);
     navigate("/admin/products")
-    // bắn data ra ngoài app.js
-    // redirect sang trang product
   }
   return (
     <form action="" onSubmit={handleSubmit(onSubmit)}>
-      <input type="text"  {...register('name', { required: true })} />
-      <input type="number"  {...register("price")} />
-      <button>Update</button>
+      <div>
+        <div className="form-group">
+          <label htmlFor="exampleInputEmail1">Tên sản phẩm</label>
+          <input type="text" className="form-control" placeholder="Tên sản phẩm" {...register('name')} />
+        </div>
+        <div className="form-group">
+          <label htmlFor="exampleInputPassword1">Giá sản phẩm</label>
+          <input type="number" className="form-control" id="exampleInputPassword1" placeholder="Giá sản phẩm" {...register('price')} />
+        </div>
+        <div className="form-group">
+          <label htmlFor="exampleInputPassword1">Image</label>
+          <input type="" className="form-control" id="exampleInputPassword1" placeholder="Giá sản phẩm" {...register('image')} />
+        </div>
+        <div className="form-group">
+          <label htmlFor="exampleInputPassword1">Thông tin sản phẩm</label>
+          <textarea className="form-control" placeholder="Thông tin sản phẩm" {...register('title')} />
+        </div>
+        <button className="btn btn-primary">Submit</button>
+      </div>
     </form>
   )
 }

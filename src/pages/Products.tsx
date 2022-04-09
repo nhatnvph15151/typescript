@@ -7,7 +7,6 @@ import { ProductTye } from '../types/product';
 
 type ProductsProps = {
     products: ProductTye[];
-
 }
 const Products = (props: ProductsProps) => {
   return (
@@ -29,11 +28,9 @@ const Products = (props: ProductsProps) => {
                           </p>
                       </div>
                   </div>
-
               })}
-
-
           </div>
+          
     </div>
   )
 }

@@ -1,3 +1,4 @@
+import Item from 'antd/lib/list/Item';
 import React, { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom';
 import { read } from '../api/product';
@@ -99,8 +100,7 @@ const ProductDetail = () => {
         </div>
       </div>
      <div>
-       <img src="http://at08.chonweb.vn/wp-content/uploads/2020/06/p-8.jpg" alt="" />
-       
+       <img src={product?.image} alt="" />
      </div>
     </div>
     
