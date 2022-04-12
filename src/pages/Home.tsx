@@ -81,26 +81,26 @@ const Home = (props: HomeProps) => {
                 <div className="w-9/12 mx-auto text-2xl">
                     <h1 className="text-4xl text-[#e7b45a] font-bold my-[30px] text-center">HÌNH ẢNH QUÁN CAFE</h1>
                     <div className="list-image grid grid-rows-1 grid-cols-2 gap-[30px]">
-                        <div className="relative">
+                        <div className="test relative">
                             <img className="w-[100%] " src="http://at08.chonweb.vn/wp-content/uploads/2020/06/g5.jpg" alt="" />
-                            <a className="absolute w-[64px] h-[64px] top-[45%] left-[45%] translate-[50%] " href="#"><i className="fa-solid fa-magnifying-glass-plus rounded-full bg-white border-2 p-3 text-center item-center "></i></a>   
+                            <a className="test1 absolute w-[64px] h-[64px] top-[45%] left-[45%] translate-[50%] " href="#"><i className="fa-solid fa-magnifying-glass-plus rounded-full bg-white border-2 p-3 text-center item-center "></i></a>   
                         </div>
                         <div className="grid grid-rows-2 grid-cols-2 gap-[30px] ">
-                            <div className="w-[100%] relative">
+                            <div className="test w-[100%] relative">
                                 <img className="w-[100%]" src="http://at08.chonweb.vn/wp-content/uploads/2020/06/g3.jpg" alt="" />
-                                <a className="absolute top-[40%] left-[40%] translate-[50%] " href="#"><i className="fa-solid fa-magnifying-glass-plus rounded-full bg-white border-2 p-3 text-center item-center " ></i></a>
+                                <a className="test1 absolute top-[40%] left-[40%] translate-[50%] " href="#"><i className="fa-solid fa-magnifying-glass-plus rounded-full bg-white border-2 p-3 text-center item-center"></i></a>
                             </div>
-                            <div className="w-[100%] relative">
+                            <div className="test w-[100%] relative">
                                 <img className="w-[100%] " src="http://at08.chonweb.vn/wp-content/uploads/2020/06/g2.jpg" alt="" />
-                                <a className="absolute top-[40%] left-[40%] translate-[50%] " href="#"><i className="fa-solid fa-magnifying-glass-plus rounded-full bg-white border-2 p-3 text-center item-center " ></i></a>
+                                <a className="test1 absolute top-[40%] left-[40%] translate-[50%] " href="#"><i className="fa-solid fa-magnifying-glass-plus rounded-full bg-white border-2 p-3 text-center item-center"></i></a>
                             </div>
-                            <div className="w-[100%] relative">
+                            <div className="test w-[100%] relative">
                                 <img className="w-[100%]" src="http://at08.chonweb.vn/wp-content/uploads/2020/06/g1.jpg" alt="" />
-                                <a className="absolute top-[40%] left-[40%] translate-[50%] " href="#"><i className="fa-solid fa-magnifying-glass-plus rounded-full bg-white border-2 p-3 text-center item-center "></i></a>
+                                <a className="test1 absolute top-[40%] left-[40%] translate-[50%] " href="#"><i className="fa-solid fa-magnifying-glass-plus rounded-full bg-white border-2 p-3 text-center item-center "></i></a>
                            </div>
-                            <div className="w-[100%] relative">
+                            <div className="test w-[100%] relative">
                                 <img className="w-[100%]" src="http://at08.chonweb.vn/wp-content/uploads/2020/06/g4.jpg" alt="" />
-                                <a className="absolute top-[40%] left-[40%] translate-[50%] " href="#"><i className="fa-solid fa-magnifying-glass-plus rounded-full bg-white border-2 p-3 text-center item-center "></i></a>
+                                <a className="test1 absolute top-[40%] left-[40%] translate-[50%] " href="#"><i className="fa-solid fa-magnifying-glass-plus rounded-full bg-white border-2 p-3 text-center item-center "></i></a>
                             </div>
                         </div>
                     </div>

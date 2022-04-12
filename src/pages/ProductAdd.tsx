@@ -11,12 +11,15 @@ type TypeInputs = {
   image: string,
   title: string
 }
-
+ 
 const ProductAdd = (props: ProductAddProps) => {
   const { register, handleSubmit, formState: { errors } } = useForm<TypeInputs>();
+  
+  console.log(errors)
   const navigate = useNavigate();
 
   const onSubmit: SubmitHandler<TypeInputs> = data => {
+
     const file = data.image[0]
     const formData = new FormData()
 
@@ -29,11 +32,12 @@ const ProductAdd = (props: ProductAddProps) => {
         "Content-Type": "application/x-ww-formendcoded"
       },
       data: formData
-    }).then((yen) => {
-      data.image = yen.data.url
+    }).then((hi) => {
+      data.image =  hi.data.url
       props.onAdd(data);
       navigate("/admin/products")
     })
+
 
 
 
@@ -43,19 +47,31 @@ const ProductAdd = (props: ProductAddProps) => {
       <div>
         <div className="form-group">
           <label htmlFor="exampleInputEmail1">Tên sản phẩm</label>
-          <input type="text" className="form-control" placeholder="Tên sản phẩm" {...register('name')} />
+          <input type="text" className="form-control" placeholder="Tên sản phẩm" {...register('name',{required:true})}  />
+          {Object.keys(errors).length!==0 && (
+            <div>{errors.name?.type === "required" && <p className="text-red-500"> Không được để trống </p>}</div>
+          )}
         </div>
         <div className="form-group">
           <label htmlFor="exampleInputPassword1">Giá sản phẩm</label>
-          <input type="number" className="form-control" id="exampleInputPassword1" placeholder="Giá sản phẩm" {...register('price')} />
+          <input type="number" className="form-control" id="exampleInputPassword1" placeholder="Giá sản phẩm" {...register('price', { required: true })} />
+          {Object.keys(errors).length !== 0 && (
+            <div>{errors.name?.type === "required" && <p className="text-red-500"> Không được để trống </p>}</div>
+          )}
         </div>
         <div className="form-group">
           <label htmlFor="exampleInputPassword1">Giá sản phẩm</label>
-          <input type="file" className="form-control" id="exampleInputPassword1" placeholder="Giá sản phẩm" {...register('image')} />
+          <input type="file" className="form-control" id="exampleInputPassword1" placeholder="Giá sản phẩm" {...register('image', { required: true })} /> 
+          {Object.keys(errors).length !== 0 && (
+            <div>{errors.name?.type === "required" && <p className="text-red-500"> Không được để trống </p>}</div>
+          )}
         </div>
         <div className="form-group">
           <label htmlFor="exampleInputPassword1">Thông tin sản phẩm</label>
-          <textarea className="form-control" placeholder="Thông tin sản phẩm" {...register('title')} />
+          <textarea className="form-control" placeholder="Thông tin sản phẩm" {...register('title', { required: true })} />
+          {Object.keys(errors).length !== 0 && (
+            <div>{errors.name?.type === "required" && <p className="text-red-500"> Không được để trống </p>}</div>
+          )}
         </div>
         <button className="btn btn-primary">Submit</button>
       </div>
